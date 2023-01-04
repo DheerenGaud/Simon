@@ -68,7 +68,7 @@ function checkAnswer(currentLevel){
      reStart();
      setTimeout(function () {
         $("body").addClass("game-over")
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over, Press Any Key to Restart Or Start");
       }, 200);
    }
 }
@@ -76,18 +76,20 @@ function reStart(){
 
     userClickedPattern = [];
     started=false;
+    $(".Sbtn").show();
 }
 
 $(".Rbtn").click(function(){
     $(".rule").slideToggle();
 })
-$(document).dblclick(function() {
+$(".Sbtn").click(function() {
     console.log("hellow")
     if (!started) {
-          level=0;
-    $("body").removeClass("game-over")
-      $("#level-title").text("Level " + level);
-      nextSequence();
-      started = true;
+        level=0;
+        $("body").removeClass("game-over")
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
     }
-  })
+    $(".Sbtn").hide();
+})
