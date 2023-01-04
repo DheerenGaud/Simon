@@ -9,7 +9,8 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 30px;
+  line-height: 40px;
   margin:  5%;
   color: #FEF2BF;
 }
