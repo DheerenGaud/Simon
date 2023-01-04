@@ -83,13 +83,11 @@ $(".Rbtn").click(function(){
     $(".rule").slideToggle();
 })
 $(".Sbtn").click(function() {
-    console.log("hellow")
-    if (!started) {
+    
         level=0;
         $("body").removeClass("game-over")
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
-    }
-    $(".Sbtn").hide();
+        $(".Sbtn").hide();
 })
